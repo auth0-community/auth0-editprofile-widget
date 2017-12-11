@@ -3,7 +3,7 @@
 This widget provides a way to allow users to update their own profile.
 It uses the user token to update the user metadata.
 
-Check the demo: http://auth0.github.io/auth0-editprofile-widget/
+Check the demo: http://auth0-community.github.io/auth0-editprofile-widget/
 
 ## Key features
 
