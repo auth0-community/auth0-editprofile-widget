@@ -39,7 +39,7 @@
     "packageify": "^0.2.0",
     "rimraf": "~2.2.2",
     "through": "^2.3.4",
-    "uglify-js": "~2.4.15",
+    "uglify-js": "~> 2.6.0",
     "unreleased": "^0.0.5"
   },
   "browserify": {
