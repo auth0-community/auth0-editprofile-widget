@@ -52,11 +52,11 @@ Parameters:
 * auth0_domain: it is your Auth0 account domain (ie: yourdomain.auth0.com)
 * container_id: it should be the id of the dom element where the widget will load
 * fields: it is an array with the fields that the widget will show. Each of the has the following attributes:
-    - id: Optional. This can be used to set a custom id to the field. By default, if not provided, it is generated using this template `field_${type}_${attribute}` but having several fields form the same tuple (attribute,type) will provide an id collition.
+    - id: Optional. This can be used to set a custom id to the field. By default, if not provided, it is generated using this template `field_${type}_${attribute}` but having several fields form the same tuple (attribute, type) will provide an id collision.
     - label: this is the input label text
     - type: input type (text, date, number, select, checkbox, radio)
     - attribute: this is the user_metadata attribute name where it will be saved
-    - validation: it is a validation function that will be excecuted before calling the Auth0 API. If there is an error, the text returned by the function will be used as the error message. If null is returned, it will assume no error.
+    - validation: it is a validation function that will be executed before calling the Auth0 API. If there is an error, the text returned by the function will be used as the error message. If null is returned, it will assume no error.
     - render: used for custom fields. It should return a valid HTML to be rendered by the widget.
     - onChange: event triggered on changes in the field. For custom fields, you will need to trigger it manually.
 
@@ -65,14 +65,14 @@ The form will be rendered when it is initialized and will request the user data 
 ### Events
 
 * loading: this occurs before getting the user profile when the init method is called
-* loaded: this occurs after geting the user profile when the init method is called
+* loaded: this occurs after getting the user profile when the init method is called
 * submit: this occurs when the user submits the form, before the API is called
 * save: this occurs after the API is called, if a success response is received
-* error: this occurs if there is any error in tha API call
+* error: this occurs if there is an error in the API call
 
 ## Updating users (Extending the widget)
 
-By default this widget provides a way to update the `user_metadata` using the user token. Since to update the `app_metadata` and root attributes an `app_token` is needed, it shouldn't be done on client side.
+By default, this widget provides a way to update the `user_metadata` using the user token. Since to update the `app_metadata` and the root attributes an `app_token` is needed, it shouldn't be done on the client side.
 
 In this case, you need to implement your own connection strategy that will make a request to your backend and from there update the user data. You can also use the built-in connection strategy and webtask provided by the plugin in case you are working in a backendless app.
 
@@ -101,13 +101,13 @@ var editProfileWidget = new Auth0EditProfileWidget('editProfileContainer',
 ```
 
 options:
-- endpoint: the url to call to get and save the profie (by default both use this)
+- endpoint: the url to call to get and save the profile (by default both use this)
 - save_endpoint: the url used to save the profile
 - save_method: the HTTP method used to save the profile (by default `PATCH`)
 
 ### Creating a custom connection strategy
 
-Connecting to an existing backend can have special requirements and different ways to call the API endpoint. In this case, you have the posibility to create your own connection strategy.
+Connecting to an existing backend can have special requirements and different ways to call the API endpoint. In this case, you have the possibility to create your own connection strategy.
 
 The connection strategy is an object that provides 2 methods:
 - get(): this will return the entire Auth0 user object
@@ -116,7 +116,7 @@ The connection strategy is an object that provides 2 methods:
 
 You can see the strategies provided by the widget as an example:
 - [Auth0 Api Strategy](https://github.com/auth0/auth0-editprofile-widget/blob/master/lib/ConnectionStrategy/Auth0ApiStrategy.js): this calls directly the Auth0 API in order to update only the `user_metadata`.
-- [Webtask Strategy](https://github.com/auth0/auth0-editprofile-widget/blob/master/lib/ConnectionStrategy/WebtaskStrategy.js): this will call the endpoint you set in the construct. It can be used to call any othe endpoint besides the Webtask.
+- [Webtask Strategy](https://github.com/auth0/auth0-editprofile-widget/blob/master/lib/ConnectionStrategy/WebtaskStrategy.js): this will call the endpoint you set in the construct. It can be used to call any other endpoint besides the Webtask.
 
 ### Using custom fields
 
@@ -132,7 +132,7 @@ This widget support the ability to add custom fields in order to render your own
 ...
 ```
 
-This field will show a greeting showing dinamically the user name.
+This field will show a greeting showing dynamically the username.
 
 ### Updating field value
 
@@ -144,20 +144,20 @@ editProfileWidget.updateFieldById('customName', {
 });
 ```
 
-Prameters:
+Parameters:
 
-* id: the field id your want to update
+* id: the field id you want to update
 * options: the field options to extend
 
 ## What is Auth0?
 
 Auth0 helps you to:
 
-* Add authentication with [multiple authentication sources](https://docs.auth0.com/identityproviders), either social like **Google, Facebook, Microsoft Account, LinkedIn, GitHub, Twitter, Box, Salesforce, amont others**, or enterprise identity systems like **Windows Azure AD, Google Apps, Active Directory, ADFS or any SAML Identity Provider**.
+* Add authentication with [multiple authentication sources](https://docs.auth0.com/identityproviders), either social like **Google, Facebook, Microsoft Account, LinkedIn, GitHub, Twitter, Box, Salesforce, among others**, or enterprise identity systems like **Windows Azure AD, Google Apps, Active Directory, ADFS or any SAML Identity Provider**.
 * Add authentication through more traditional **[username/password databases](https://docs.auth0.com/mysql-connection-tutorial)**.
 * Add support for **[linking different user accounts](https://docs.auth0.com/link-accounts)** with the same user.
-* Support for generating signed [Json Web Tokens](https://docs.auth0.com/jwt) to call your APIs and **flow the user identity** securely.
-* Analytics of how, when and where users are logging in.
+* Support for generating signed [JSON Web Tokens](https://docs.auth0.com/jwt) to call your APIs and **flow the user identity** securely.
+* Analytics on how, when and where users are logging in.
 * Pull data from other sources and add it to the user profile, through [JavaScript rules](https://docs.auth0.com/rules).
 
 ## Create a free Auth0 Account
