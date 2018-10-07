@@ -133,10 +133,14 @@ This widget support the ability to add custom fields in order to render your own
 ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 This field will show a greeting showing dynamically the username.
 =======
 This field will show a greeting showing dynamically the user name.
 >>>>>>> Fixed few typos
+=======
+This field will show a greeting showing dynamically the user name.
+>>>>>>> 994d339537b607ef4519de485bbecf18b9a190d3
 
 ### Updating field value
 
