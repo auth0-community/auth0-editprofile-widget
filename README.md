@@ -7,9 +7,9 @@ Check the demo: http://auth0-community.github.io/auth0-editprofile-widget/
 
 ## Key features
 
-* Provide an easy way to update your users' profile
-* Plug 'n play user_metadata update
-* Easily extensible to work with your own API (or with the provided Webtask) in order to update app_metadata and root attributes like `email`
+* Provide an easy way to update your users' profile.
+* Plug 'n play user_metadata update.
+* Easily extensible to work with your own API (or with the provided Webtask) in order to update app_metadata and root attributes like `email`.
 
 ## Usage
 
@@ -49,13 +49,13 @@ editProfileWidget.init(user_token);
 
 Parameters:
 
-* auth0_domain: it is your Auth0 account domain (ie: yourdomain.auth0.com)
-* container_id: it should be the id of the dom element where the widget will load
+* auth0_domain: it is your Auth0 account domain (ie: yourdomain.auth0.com).
+* container_id: it should be the id of the dom element where the widget will load.
 * fields: it is an array with the fields that the widget will show. Each of the has the following attributes:
     - id: Optional. This can be used to set a custom id to the field. By default, if not provided, it is generated using this template `field_${type}_${attribute}` but having several fields form the same tuple (attribute, type) will provide an id collision.
-    - label: this is the input label text
-    - type: input type (text, date, number, select, checkbox, radio)
-    - attribute: this is the user_metadata attribute name where it will be saved
+    - label: this is the input label text.
+    - type: input type (text, date, number, select, checkbox, radio).
+    - attribute: this is the user_metadata attribute name where it will be saved.
     - validation: it is a validation function that will be executed before calling the Auth0 API. If there is an error, the text returned by the function will be used as the error message. If null is returned, it will assume no error.
     - render: used for custom fields. It should return a valid HTML to be rendered by the widget.
     - onChange: event triggered on changes in the field. For custom fields, you will need to trigger it manually.
@@ -64,11 +64,11 @@ The form will be rendered when it is initialized and will request the user data 
 
 ### Events
 
-* loading: this occurs before getting the user profile when the init method is called
-* loaded: this occurs after getting the user profile when the init method is called
-* submit: this occurs when the user submits the form, before the API is called
-* save: this occurs after the API is called, if a success response is received
-* error: this occurs if there is an error in the API call
+* loading: this occurs before getting the user profile when the init method is called.
+* loaded: this occurs after getting the user profile when the init method is called.
+* submit: this occurs when the user submits the form, before the API is called.
+* save: this occurs after the API is called, if a success response is received.
+* error: this occurs if there is an error in the API call.
 
 ## Updating users (Extending the widget)
 
@@ -86,9 +86,9 @@ wt create --name update_user_profile \
   --output url update_user_profile.js --no-parse --no-merge
 ```
 
-- app_token: it should be an app token generated in the [API Exporer](https://auth0.com/docs/api/v2) with `read:users`, `update:users` and `update:users_app_metadata` scopes
-- client_secret: should be the client secret of the same app you are using in the client side. It is used to verify the user token
-- domain: your auth0 account domain
+- app_token: it should be an app token generated in the [API Exporer](https://auth0.com/docs/api/v2) with `read:users`, `update:users` and `update:users_app_metadata` scopes.
+- client_secret: should be the client secret of the same app you are using in the client side. It is used to verify the user token.
+- domain: your auth0 account domain.
 
 and set the `connection_strategy`:
 
@@ -101,18 +101,18 @@ var editProfileWidget = new Auth0EditProfileWidget('editProfileContainer',
 ```
 
 options:
-- endpoint: the url to call to get and save the profile (by default both use this)
-- save_endpoint: the url used to save the profile
-- save_method: the HTTP method used to save the profile (by default `PATCH`)
+- endpoint: the url to call to get and save the profile (by default both use this).
+- save_endpoint: the url used to save the profile.
+- save_method: the HTTP method used to save the profile (by default `PATCH`).
 
 ### Creating a custom connection strategy
 
 Connecting to an existing backend can have special requirements and different ways to call the API endpoint. In this case, you have the possibility to create your own connection strategy.
 
 The connection strategy is an object that provides 2 methods:
-- get(): this will return the entire Auth0 user object
+- get(): this will return the entire Auth0 user object.
 - setUserToken(user_token): this will set the user token to request and update the profile data. It is called when the init method is called.
-- patch(data): this will push the entire form data to the server
+- patch(data): this will push the entire form data to the server.
 
 You can see the strategies provided by the widget as an example:
 - [Auth0 Api Strategy](https://github.com/auth0/auth0-editprofile-widget/blob/master/lib/ConnectionStrategy/Auth0ApiStrategy.js): this calls directly the Auth0 API in order to update only the `user_metadata`.
@@ -146,8 +146,8 @@ editProfileWidget.updateFieldById('customName', {
 
 Parameters:
 
-* id: the field id you want to update
-* options: the field options to extend
+* id: the field id you want to update.
+* options: the field options to extend.
 
 ## What is Auth0?
 
