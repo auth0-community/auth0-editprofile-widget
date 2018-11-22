@@ -22,7 +22,7 @@ Add the `auth0-editprofile-widget.min.js` dependency, set up the form layout and
 
 <script type="text/javascript">
 
-var editProfileWidget = new Auth0EditProfileWidget(auth0_domain, 'editProfileContainer', [
+var editProfileWidget = new Auth0EditProfileWidget('editProfileContainer', { domain: auth_domain }, [
     { label: "Name", type:"text", attribute:"name", 
       validation: function(name){
           return (name.length > 10 ? 'The name is too long' : null);
