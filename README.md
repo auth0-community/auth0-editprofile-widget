@@ -50,7 +50,7 @@ editProfileWidget.init(user_token);
 Parameters:
 
 * auth0_domain: it is your Auth0 account domain (ie: yourdomain.auth0.com)
-* container_id: it should be the id of the dom element where the widget will load
+* container_id: it should be the id of the DOM element where the widget will load
 * fields: it is an array with the fields that the widget will show. Each of the has the following attributes:
     - id: Optional. This can be used to set a custom id to the field. By default, if not provided, it is generated using this template `field_${type}_${attribute}` but having several fields form the same tuple (attribute, type) will provide an id collision.
     - label: this is the input label text
