@@ -1,4 +1,5 @@
 # Auth0 Edit Profile Widget
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 <img src="https://img.shields.io/badge/community-driven-brightgreen.svg"/> <br>
 
 This widget provides a way to allow users to update their own profile.
@@ -207,3 +208,19 @@ Auth0 helps you to:
 
 * Go to [Auth0 website](https://auth0.com/signup)
 * Hit the **SIGN UP** button in the upper-right corner
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table>
+  <tr>
+    <td align="center"><a href="https://twitter.com/beardaway"><img src="https://avatars3.githubusercontent.com/u/11062800?v=4" width="100px;" alt="Conrad Sopala"/><br /><sub><b>Conrad Sopala</b></sub></a><br /><a href="#review-beardaway" title="Reviewed Pull Requests">👀</a> <a href="#maintenance-beardaway" title="Maintenance">🚧</a></td>
+  </tr>
+</table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
