@@ -23,6 +23,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "glena",
+      "name": "Germán Lena",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5647310?v=4",
+      "profile": "https://github.com/glena",
+      "contributions": [
+        "code",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
