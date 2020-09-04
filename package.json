@@ -13,7 +13,7 @@
     "fetchify": "0.0.2",
     "form-serialize": "^0.7.0",
     "jwt-decode": "^1.4.0",
-    "react": "^0.13.3"
+    "react": "^16.13.1"
   },
   "devDependencies": {
     "babelify": "^6.1.3",
