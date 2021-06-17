@@ -1,3 +1,7 @@
+## Deprecation Notice
+
+The Auth0 Community is in the process of deprecating this library, and the repository will no longer be available on Github after the end-of-life date of July 20, 2021. Please make plans to find a suitable replacement or remove this library from any active projects before the end-of-life date. Please reach out in the supporting [Auth0 Community topic](https://community.auth0.com/t/community-repo-deprecation-auth0-go/64665) if you have any questions or concerns.
+
 # Auth0 Edit Profile Widget
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 <img src="https://img.shields.io/badge/community-driven-brightgreen.svg"/> <br>
